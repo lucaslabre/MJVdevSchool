@@ -1,16 +1,26 @@
 package cadastro;
 
+import factory.Endereco;
+
 public class Cadastro {
 	
 	private Integer id;
 	private String nome;
 	private Long telefone;
 	private String email;
-	private String endereco;
+	private Endereco endereco;
 	private String cpfCnpj;
 	
 	public Cadastro() {}
 
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -41,14 +51,6 @@ public class Cadastro {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
 	}
 
 	public String getCpfCnpj() {

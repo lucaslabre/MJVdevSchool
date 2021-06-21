@@ -11,7 +11,7 @@ public class PrinterApp {
 		//CRIAR O OBJETO - ENDERECO - LOGRADOURO, NUMERO, BAIRRO, CIDADE - SIGLA ESTADO
 		//FORMATAR O CNPJ, IE, EM - PLUS
 		
-		System.out.printf("Mr.%2$s,%1$s\n\n", "Lucas", "Labre");
+		//System.out.printf("Mr.%2$s,%1$s\n\n", "Lucas", "Labre");
 		
 		Empresa empresa = pedido.getEmpresa();
 		

@@ -8,6 +8,7 @@ import cadastro.CD;
 import cadastro.Cadastro;
 import cadastro.Empresa;
 import cadastro.Livro;
+import factory.Endereco;
 import factory.FabricaCadastro;
 import pedidos.Pedido;
 import pedidos.PedidoItem;
@@ -52,7 +53,9 @@ public class Application {
 		
 		// registering the company
 		Cadastro cadEmpresa = FabricaCadastro.criarCadastro("Duvivier Mesa Posta", "duviviermesaposta@gmail.com", 21984938584l);
-		cadEmpresa.setEndereco("Rua dos bobos, 0, centro - RJ");
+		Endereco endereco = new Endereco("Rua João XXII", 500, "Hambuurgo", "R. Janeiro", "RJ");
+		cadEmpresa.setEndereco(endereco);
+		//cadEmpresa.setEndereco("Rua João XXII, 500, Hambuurgo - R. Janeiro - RJ");
 		cadEmpresa.setCpfCnpj("92032784000101");
 		
 		empresa.setCadastro(cadEmpresa);
