@@ -73,6 +73,8 @@ public class Application {
 		pedido1.setData(new Date(2021,6,21));
 		pedido1.setValorTotal(325.0);
 		pedido1.setId(23234);
+		pedido1.setCcf(000025);
+		pedido1.setCoo(900280);
 		
 		List<PedidoItem> itens = new ArrayList<>();
 		PedidoItem item = new PedidoItem();

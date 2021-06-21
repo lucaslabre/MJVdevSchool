@@ -18,17 +18,32 @@ public class PrinterApp {
 		StringBuilder sb = new StringBuilder();
 		sb.append(empresa.getCadastro().getNome() + "\n");
 		sb.append(empresa.getCadastro().getEndereco() + "\n");
-		sb.append(String.format("CNPJ: %s \n", empresa.getCadastro().getCpfCnpj()));
+		
+		
+		String cpfCnpj = empresa.getCadastro().getCpfCnpj();
+		if(cpfCnpj.length() > 12){			
+			cpfCnpj = String.format("%s.%s.%s/%s-%s", cpfCnpj.substring(0, 2), cpfCnpj.substring(2, 5), cpfCnpj.substring(5, 8),cpfCnpj.substring(8, 12),cpfCnpj.substring(12, 14));
+		}
+		else {
+			cpfCnpj = String.format("%s.%s.%s-%s", cpfCnpj.substring(0, 3), cpfCnpj.substring(3, 6), cpfCnpj.substring(6, 9), cpfCnpj.substring(9, 11));
+		}
+		
+		
+		sb.append(String.format("CNPJ: %s \n", cpfCnpj));
 		sb.append(String.format("IE: %d\nIM: %d\n",empresa.getIe(), empresa.getIm()));
-		sb.append("------------------------------------------------------------------\n");
+		
+		sb.append("-".repeat(50));
 		
 		//NUMA LINHA DATA FORMATADA - CCF (6) DIGITOS - COO (6DIGITOS)
 		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); 
 		String dataFormatada = formatador.format(pedido.getData());
-		sb.append(dataFormatada);
+		sb.append(String.format("\n%sV  CCF:%-10s CCO:%s\n", dataFormatada, "000025", "000280"));
 		
-		sb.append("------------------------------------------------------------------\n");
-		sb.append(String.format("TOTAL %.2f", pedido.getValorTotal()));
+		sb.append("-".repeat(50));
+		
+		sb.append(String.format("\nTOTAL %.2f", pedido.getValorTotal()));
+		
+		
 		
 		
 		

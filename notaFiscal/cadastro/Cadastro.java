@@ -58,6 +58,14 @@ public class Cadastro {
 	}
 
 	public void setCpfCnpj(String cpfCnpj) {
+		/*
+		if(cpfCnpj.length() > 12){			
+			this.cpfCnpj = String.format("%s.%s.%s/%s-%s", cpfCnpj.substring(0, 2), cpfCnpj.substring(2, 5), cpfCnpj.substring(5, 8),cpfCnpj.substring(8, 12),cpfCnpj.substring(12, 14));
+		}
+		else {
+			this.cpfCnpj = String.format("%s.%s.%s-%s", cpfCnpj.substring(0, 3), cpfCnpj.substring(3, 6), cpfCnpj.substring(6, 9), cpfCnpj.substring(9, 11));
+		}
+		*/
 		this.cpfCnpj = cpfCnpj;
 	}
 	
