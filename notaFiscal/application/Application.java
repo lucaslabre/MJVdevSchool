@@ -51,11 +51,18 @@ public class Application {
 		 */
 		Empresa empresa = new Empresa(20930184l, 918372839l);
 		
+		// creating the address
+		Endereco endereco = new Endereco();
+		endereco.setLograndouro("Rua João XXII");
+		endereco.setNum("S/N");
+		endereco.setBairro("Hambuurgo");
+		endereco.setCidade("R. Janeiro");
+		endereco.setUf("RJ");
+		endereco.setCep(21839403l);
+		
 		// registering the company
 		Cadastro cadEmpresa = FabricaCadastro.criarCadastro("Duvivier Mesa Posta", "duviviermesaposta@gmail.com", 21984938584l);
-		Endereco endereco = new Endereco("Rua João XXII", 500, "Hambuurgo", "R. Janeiro", "RJ");
 		cadEmpresa.setEndereco(endereco);
-		//cadEmpresa.setEndereco("Rua João XXII, 500, Hambuurgo - R. Janeiro - RJ");
 		cadEmpresa.setCpfCnpj("92032784000101");
 		
 		empresa.setCadastro(cadEmpresa);
@@ -73,8 +80,8 @@ public class Application {
 		pedido1.setData(new Date(2021,6,21));
 		pedido1.setValorTotal(325.0);
 		pedido1.setId(23234);
-		pedido1.setCcf(000025);
-		pedido1.setCoo(900280);
+		pedido1.setCcf(25);
+		pedido1.setCoo(280);
 		
 		List<PedidoItem> itens = new ArrayList<>();
 		PedidoItem item = new PedidoItem();
