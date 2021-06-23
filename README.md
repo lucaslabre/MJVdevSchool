@@ -9,5 +9,5 @@
 - [x] Criar constantes para os valores fixos;
 - [x] Inserir itens no cupom;
 - [x] Criar um método para reutilização das linhas divisórias;
-- [ ] Criar um método de delimitação de caracteres para quebra de linha automático;
+- [x] Criar um método de delimitação de caracteres para quebra de linha automático;
 - [ ] Gerar um arquivo .txt com as informações do cupom criado;

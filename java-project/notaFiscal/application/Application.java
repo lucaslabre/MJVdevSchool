@@ -41,7 +41,7 @@ public class Application {
 		
 		// creating the cd
 		CD cd1 = new CD();
-		cd1.setTitulo("Welcome to the jungle");
+		cd1.setTitulo("Welcome to the jungle guns n' roses disco de ouro duplo");
 		cd1.setArtista(art1);
 		cd1.setFaixa(10);
 		cd1.setValorVenda(200.0);
