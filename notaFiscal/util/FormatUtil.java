@@ -19,11 +19,11 @@ public class FormatUtil {
 	public static String formatCpfCnpj(String cpfCnpj) {
 		
 		if (ValidatorUtil.isCpfCnpj(cpfCnpj)) {
-			if (cpfCnpj.matches("\\d{11}")){
+			if (cpfCnpj.matches(String.format("\\d{%s}", ValidatorUtil.MAX_CPF))){
 				return formatCpf(cpfCnpj);
 			}
 			
-			if (cpfCnpj.matches("\\d{14}")) {
+			if (cpfCnpj.matches(String.format("\\d{%s}", ValidatorUtil.MAX_CNPJ))) {
 				return formatCnpj(cpfCnpj);
 			}
 		}
@@ -40,6 +40,10 @@ public class FormatUtil {
 		if (ValidatorUtil.isIm(im))
 			return im.replaceAll( ( "(\\d{2})(\\d{3})(\\d{3})" ) ,"$1.$2.$3");
 		return "IM inválido";
+	}
+	
+	public static String insereLinha(Integer qtd) {
+		return String.format("\n%s\n", "-".repeat(qtd));
 	}
 
 	public static void main(String[] args) {
