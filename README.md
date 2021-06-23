@@ -10,4 +10,4 @@
 - [x] Inserir itens no cupom;
 - [x] Criar um método para reutilização das linhas divisórias;
 - [x] Criar um método de delimitação de caracteres para quebra de linha automático;
-- [ ] Gerar um arquivo .txt com as informações do cupom criado;
+- [x] Gerar um arquivo .txt com as informações do cupom criado;

@@ -1,5 +1,9 @@
 package application;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +14,7 @@ import cadastro.Empresa;
 import cadastro.Livro;
 import factory.Endereco;
 import factory.FabricaCadastro;
+import notaFiscal.service.CupomService;
 import pedidos.Pedido;
 import pedidos.PedidoItem;
 
@@ -89,7 +94,6 @@ public class Application {
 		item.setQuantidade(2.0);
 		item.setValorVenda(l1.getValorVenda());
 		item.setValorTotal(item.getQuantidade() * item.getValorVenda());
-		
 		itens.add(item);
 		
 		item= new PedidoItem();
@@ -97,12 +101,20 @@ public class Application {
 		item.setQuantidade(4.0);
 		item.setValorVenda(cd1.getValorVenda());
 		item.setValorTotal(item.getQuantidade() * item.getValorVenda());
-		
 		itens.add(item);
 		
 		pedido1.setItens(itens);
 		
-		PrinterApp.imprimirPedido(pedido1);
+		
+		
+		String conteudo = CupomService.gerarCupom(pedido1);
+		File dir = new File("C:\\dev\\devSchoolMJV\\cupom");
+		
+		try {
+			PrinterApp.print(conteudo, dir, "cupom.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
