@@ -14,9 +14,11 @@ import cadastro.Empresa;
 import cadastro.Livro;
 import factory.Endereco;
 import factory.FabricaCadastro;
-import notaFiscal.service.CupomService;
 import pedidos.Pedido;
 import pedidos.PedidoItem;
+import service.CupomService;
+import util.PrinterApp;
+import util.ReaderApp;
 
 public class Application {
 	
@@ -111,11 +113,12 @@ public class Application {
 		File dir = new File("C:\\dev\\devSchoolMJV\\cupom");
 		
 		try {
+			//ReaderApp.gerarPedido(dir, "pedidos.txt");
 			PrinterApp.print(conteudo, dir, "cupom.txt");
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		System.out.println(conteudo);
 	}
 
 }

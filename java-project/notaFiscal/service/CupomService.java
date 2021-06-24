@@ -1,4 +1,4 @@
-package notaFiscal.service;
+package service;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
