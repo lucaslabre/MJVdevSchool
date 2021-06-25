@@ -9,11 +9,11 @@ public class JDBCApplication {
 		CadastroDao dao = new CadastroDao();
 		
 		Cadastro cadastro = new Cadastro();
-		cadastro.setNome("Marcos");
-		cadastro.setTelefone(21974839284l);
-		dao.inseart(cadastro);
+		cadastro.setNome("Roberta");
+		cadastro.setTelefone(21993843784l);
+		//dao.insert(cadastro);
 		
-		//dao.deleteById(6);
+		dao.deleteById(11);
 	}
 	
 }
