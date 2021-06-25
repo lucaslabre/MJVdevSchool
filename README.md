@@ -8,6 +8,19 @@
 - [x] Formatar IE, IM (Bônus);
 - [x] Criar constantes para os valores fixos;
 - [x] Inserir itens no cupom;
+
+### Aula 7
+
 - [x] Criar um método para reutilização das linhas divisórias;
 - [x] Criar um método de delimitação de caracteres para quebra de linha automático;
-- [x] Gerar um arquivo .txt com as informações do cupom criado;
+- [x] Gerar um arquivo .txt com as informações do cupom criado.
+
+### Aula 8
+
+- [x] Criar um banco de dados simples para cadastro de clientes (utilizaremos o PostgreSQL);
+- [x] Sincronizar banco de dados com o projeto;
+
+### Aula 9
+
+- [ ] Refatorar o banco de dados para um modelo mais elaborado;
+- [ ] Utilizar orientação a objetos para incluir informações no banco de dados;
