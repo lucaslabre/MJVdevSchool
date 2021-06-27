@@ -1,0 +1,13 @@
+Projeto controle de vendas da pastelaria
+
+- Um cliente pode fazer um pedido, que pode ser pastel, bolinho ou bebida. 
+- De cada produto deve ser armazenado seu código de identificação, o nome, a categoria e o preço.
+- O cliente pode pagar em dinheiro, cartão de crédito ou débito.
+- Deve-se fazer o registro da de todos os produtos que foram vendidos no dia.
+
+
+
+Categorias -> Produtos
+pasteis -> carne, queijo, frango com catupiri, pizza, carne seca com catupiri.
+bolinhos -> carne moída, carne seca, queijo, kibe, massa.
+bebidas -> caldo de cana 1/2L, caldo de cana 1L, guaravita, refrigerante, matte, água sem gás, água com gás.

@@ -6,6 +6,9 @@ public class Cadastro {
 	private String nome;
 	private Long telefone;
 	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public Integer getId() {
 		return id;
 	}

@@ -22,5 +22,10 @@
 
 ### Aula 9
 
-- [ ] Refatorar o banco de dados para um modelo mais elaborado;
-- [ ] Utilizar orientação a objetos para incluir informações no banco de dados;
+- [x] Refatorar o banco de dados para um modelo mais elaborado;
+- [x] Utilizar orientação a objetos para incluir informações no banco de dados;
+
+### Aula 10
+
+- [x] Implementar as operações de CRUD com JDBC em um modelo simples;
+- [ ] Utilizar os métodos de CRUD para um modelo mais elaborado.
