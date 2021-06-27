@@ -26,14 +26,18 @@ public class JDBCApplication {
 	
 	private static Cadastro fabricaCadastro() {
 		Cadastro cadastro = new Cadastro();
-		cadastro.setNome("Angelo");
+		cadastro.setNome("Lucia");
 		cadastro.setTelefone(21998763784l);
 		return cadastro;
 	}
 	
+	private static boolean existeNome(String nome) {
+		Cadastro cad = dao.buscarNome(nome);
+		return cad != null;
+	}
+	
 	private static void inserir() {
-		Cadastro cad = dao.buscarNome(fabricaCadastro().getNome());
-		if (cad==null) {			
+		if (!existeNome(fabricaCadastro().getNome())) {			
 			Cadastro cadastro = fabricaCadastro();
 			dao.inserir(cadastro);
 		}else

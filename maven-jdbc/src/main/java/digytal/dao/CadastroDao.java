@@ -48,7 +48,7 @@ public class CadastroDao {
 	
 	public void deletarId(int id) {
 		try {
-			String sql = "DELETE FROM public.tab_cadastro WHERE id=?;";
+			String sql = "DELETE FROM public.tab_cliente WHERE id=?;";
 			PreparedStatement st = cnn.prepareStatement(sql);
 			st.setInt(1, id);
 			st.execute();

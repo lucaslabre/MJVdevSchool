@@ -1,6 +1,6 @@
 -- Criar tabela
-CREATE TABLE public.tabela_teste (
-	codigo serial NOT NULL,
+CREATE TABLE public.tab_cliente (
+	codigo int4 NOT NULL,
 	pj_pf bpchar(1) NOT NULL,
 	razao_social varchar(50) NOT NULL,
 	cpf_cnpj varchar(14) NOT NULL,
@@ -14,12 +14,9 @@ CREATE TABLE public.tabela_teste (
 	cidade varchar(50) NOT NULL,
 	rua varchar(50) NOT NULL,
 	numero varchar(6) NOT NULL,
-	complemento varchar(30) NOT NULL,
+	complemento varchar(30) NULL,
 	bairro varchar(40) NOT NULL,
 	site varchar(50) NULL,
 	observacoes text NULL,
-	CONSTRAINT tabela_teste_pkey PRIMARY KEY (codigo)
+	CONSTRAINT tab_cliente_pkey PRIMARY KEY (codigo)
 );
-
--- Alterar nome da tabela
-ALTER TABLE public.tabela_teste RENAME TO tab_cliente;
