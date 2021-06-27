@@ -28,4 +28,4 @@
 ### Aula 10
 
 - [x] Implementar as operações de CRUD com JDBC em um modelo simples;
-- [ ] Utilizar os métodos de CRUD para um modelo mais elaborado.
+- [x] Utilizar os métodos de CRUD para um modelo mais elaborado.
