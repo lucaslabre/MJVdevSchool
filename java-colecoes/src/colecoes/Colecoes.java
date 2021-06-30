@@ -2,9 +2,11 @@ package colecoes;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Stream;
+
+import dog.Dog;
 
 public class Colecoes {	
 	public static void main(String[] args) {
@@ -16,8 +18,9 @@ public class Colecoes {
 		//Interações
 		//Collections (sort, sufle, reverse)
 		
-		setHashSet();
+		//setHashSet();
 		//setTreeSet();
+		setLinkedHashSet();
 		
 	}
 	
@@ -110,6 +113,47 @@ public class Colecoes {
 		System.out.println("\nTeste clear");
 		set.clear();
 		System.out.println(set);
+		
+		
+		// Métodos especiais do TreeSet
+		System.out.println("Ordenar o objeto Dog pelo tamanho");
+		Dog dog1 = new Dog(5, "Rex");
+		Dog dog2 = new Dog(3, "Pipoca");
+		Dog dog3 = new Dog(8, "Flor");
+		Dog dog4 = new Dog(6, "Osvaldo");
+		
+		Set setDog = new TreeSet();
+		setDog.add(dog1);
+		setDog.add(dog2);
+		setDog.add(dog3);
+		setDog.add(dog4);
+		
+		Iterator<Dog> it = setDog.iterator();
+		while(it.hasNext()) {
+			Dog dog = it.next();
+			System.out.println(dog.getTamanho() + " " + dog.getNome());
+		}
+		
+	}
+	
+	static void setLinkedHashSet() {
+		System.out.println("Teste iteração LinkedHashSet");
+		Dog dog1 = new Dog(5, "Rex");
+		Dog dog2 = new Dog(3, "Pipoca");
+		Dog dog3 = new Dog(8, "Flor");
+		Dog dog4 = new Dog(6, "Osvaldo");
+		
+		Set<Dog> lhs = new LinkedHashSet<Dog>();
+		lhs.add(dog1);
+		lhs.add(dog2);
+		lhs.add(dog3);
+		lhs.add(dog4);
+		
+		Iterator<Dog> lhsIterator = lhs.iterator();
+		while (lhsIterator.hasNext()) {
+			Dog dog = lhsIterator.next();
+			System.out.println(dog.getTamanho() + " " + dog.getNome());
+		}
 	}
 	
 	
