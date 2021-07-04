@@ -6,6 +6,10 @@ resolver dificuldades de implementação de estruturas de dados utilizando array
 Para isso foram desenvolvidas classes que implementassem estuturas como listas ligadas 
 e tabelas de espalhamento (*hash*).
 
+## Colaboradores
+
+* [Lucas Labre](https://github.com/lucaslabre)
+
 ## Hierarquia de interfacess e classes
 
 A imagem a seguir mostra a hierarquia das interfaces e classes da Java Collections Framework.
@@ -22,21 +26,38 @@ chamadas de `Maps`.
 
 ![Hierarquia-Maps](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200811210611/Collection-Framework-2.png)
 
+## Descrição das classes da interface Set
+### Características em comum
+* Não permitem itens duplicados;
+* Não é possível alterar a ordem dos elementos inseridos;
+* Não é possível buscar um elemento pelo índice;
+* Permitem navegação por `for`, `while` e `Iterator`.
 
-## Descrição das interfaces
+### `HashSet`
 
-* `Collections`
-    * Não existe implementação direta dessa interface;
-    * Define as operações básicas para as coleções, como incluir, remover e alterar.
+* É a implementação padrão da interface `Set`;
+* Os elementos inseridos não obedecem uma ordem;
 
-* `Set`
-    * Assim como na teoria dos conjuntos, a interface `Set` define uma coleção que não permite elementos duplicados.
+### `LinkedHashSet`
 
-* `SortedSet`
-    * Interface que estende `Set` e possibilita a ordenação dos elementos tanto por ornem numérica quanto alfabética.
+* Extende a classe `HashSet`, então possui todos os métodos de `HashSet`;
+* Os elementos são armazenados na posição em que são inseridos;
+
+### `TreeHashSet`
+
+* Implementa a interface SortedSet, então seus elementos são ordenados;
+    * Caso os elementos sejam numéricos, serão inseridos em ordem crescente;
+    * Caso os elementos sejam Strings, serão inseridos em ordem alfabética;
+    * Caso os elementos sejam Objetos, será necessária a implementação da interface `Comparable<Object>` e implementação do método `CompareTo(Object)`.
 
 
-## implementação
+## Complexidade dos algoritmos
 
-As implementações de cada interface podem ser resumidas na tabela a seguir.
 
+HashSet             |     TreeSet     |     LinkedHashSet
+:-------------------------:|:-------------------------:|:-------------
+![](https://latex.codecogs.com/gif.latex?O%281%29)|![](https://latex.codecogs.com/gif.latex?O%28%5Clog%28n%29%29)|![](https://latex.codecogs.com/gif.latex?O%281%29)
+
+
+
+![Grafico-complexidades](https://miro.medium.com/max/1300/1*6mpaXFsrRPFXSKXK5Qgm8w.png)
