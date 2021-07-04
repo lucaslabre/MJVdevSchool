@@ -18,8 +18,8 @@ public class Colecoes {
 		//Interações
 		//Collections (sort, sufle, reverse)
 		
-		//setHashSet();
-		//setTreeSet();
+		setHashSet();
+		setTreeSet();
 		setLinkedHashSet();
 		
 	}
@@ -43,9 +43,6 @@ public class Colecoes {
 		System.out.println("\nTeste 2");
 		Set<String> set2 = Set.of("Olá", "mundo", "acorda", "para", "vida");
 		System.out.println(set2);
-		
-		
-		System.out.println();
 		
 		
 		System.out.println("\nTeste Interação");
@@ -137,7 +134,6 @@ public class Colecoes {
 	}
 	
 	static void setLinkedHashSet() {
-		System.out.println("Teste iteração LinkedHashSet");
 		Dog dog1 = new Dog(5, "Rex");
 		Dog dog2 = new Dog(3, "Pipoca");
 		Dog dog3 = new Dog(8, "Flor");
